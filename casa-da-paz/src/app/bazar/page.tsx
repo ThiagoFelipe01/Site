@@ -8,7 +8,7 @@ export default function Bazar() {
 
         <>
             <LayoutHeader />
-
+ 
             <br />
             <div className="container">
                 <div className="row align-items-center">
