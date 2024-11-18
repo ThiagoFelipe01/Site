@@ -27,15 +27,13 @@ export default function Cadastro() {
 
     const submitForm: SubmitHandler<IForm> = useCallback(
         (data) => {
-            axios
-                .post("http://localhost:8000/api/voluntarios", data)
-                .then(() => {
-                    alert("Erro ao enviar formulário. Tente novamente.");
-                })
-                .catch(() => {
-                    alert("Cadastro realizado com sucesso!");
-                    router.push("/comoajudar");
-                });
+            axios.post('http://localhost:8000/api/voluntarios/', data)
+            .then(() => {
+                router.push('/comoajudar');
+            })
+            .catch((err) => {
+                alert("Erro ao cadastrar o usuário.");
+            });
         },
         [router]
     );
